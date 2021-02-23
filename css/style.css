@@ -2,6 +2,9 @@ h1{
     text-align: center;
     color: #6633ff;
 }
+* {
+    box-sizing: border-box;
+}
 body{
     background-color: #ccffcc;
 }
@@ -21,7 +24,7 @@ ul{
 table, th, td{
     border-collapse: collapse;
     border: 1px solid black
-    
+
 }
 table{
     margin: 0 auto;
@@ -33,7 +36,7 @@ th{
     height: 20px;
     background-color: #6633ff;
     color: whitesmoke;
-    
+
 }
 tr:hover{
     background-color: #33ffff
@@ -48,4 +51,129 @@ tr:nth-child(even){
 #mapa{
     display: block;
     margin: 0 auto;
+}
+input[type=text], select, textarea, input[type=number], input[type=tel], input[type=date]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+.add {
+    background-color: #6699ff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+.del {
+    background-color: #ff3366;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+.clean {
+    background-color: #ffcc00;
+    color: white;
+    margin: 0 15px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    color: black;
+   
+}
+.add:hover {
+    background-color: #99ccff;
+    transition: all 0.3s linear;
+}
+.del:hover {
+    background-color: #ff99cc;
+    transition: all 0.3s linear;
+}
+.clean:hover {
+    background-color: #ffff99;
+    transition: all 0.3s linear;
+}
+.container {
+    border-radius: 5px;
+    background-color:#ccccff;
+    padding: 20px;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.checkmark {
+  position: absolute;
+  top: 10;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.containe {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*Ocultar botão de opção padrão do navegador*/
+.containe input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+/* crie um botão de opção personalizado*/
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+/* Ao passar o maouse  ele muda a cor*/
+.container input:checked ~ .checkmark {
+  background-color: #6633ff;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }
